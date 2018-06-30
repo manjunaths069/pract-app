@@ -11,7 +11,9 @@ public class HelloController {
         return "Greetings from Spring Boot!<br/>" +
                 "1. /arraydemo<br/>"+
                 "2. /BiggestSmallest<br/>"+
-                "3./FrontBack<br/>";
+                "3./FrontBack<br/>"+
+                "4./SeperatingArray<br/>";
+
     }
     @RequestMapping("/arraydemo")
     public String arrayDemo() {
@@ -28,6 +30,12 @@ public class HelloController {
         FrontBack frontBack = new FrontBack();
         return "Front Back Array list:" +frontBack.isSymmetric();
     }
+    @RequestMapping("/SeperatingArray")
+    public String  SeperatingArray() {
+        SeperatingArray seperatingArray = new SeperatingArray();
+        return "Output Array1=" + seperatingArray.seperate1() + "Output Array2=" + seperatingArray.seperate2();
+    }
+
 
 
 }
