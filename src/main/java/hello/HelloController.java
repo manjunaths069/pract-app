@@ -6,9 +6,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RestController
 public class HelloController {
     
-    @RequestMapping("/")
+    @RequestMapping("/health")
     public String index() {
-        return "Greetings from Spring Boot!";
+        return "Greetings from Spring Boot!<br/>" +
+                "1. /arraydemo";
     }
-    
+
+    @RequestMapping("/arraydemo")
+    public String arrayDemo() {
+        return "This is the output of array demo.";
+    }
+
 }
