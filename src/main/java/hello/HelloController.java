@@ -10,10 +10,9 @@ public class HelloController {
     public String index() {
         return "Greetings from Spring Boot!<br/>" +
                 "1. /arraydemo<br/>"+
-                "2. /BiggestSmallest";
-
+                "2. /BiggestSmallest<br/>"+
+                "3./FrontBack<br/>";
     }
-
     @RequestMapping("/arraydemo")
     public String arrayDemo() {
         return "This is the output of array demo.";
@@ -24,5 +23,11 @@ public class HelloController {
         return "the bigest value is :"+largestSmallest.getBiggest()+
                 "<br/>the smallest value is :"+largestSmallest.getsmallest();
     }
+    @RequestMapping("/FrontBack")
+    public String FrontBack() {
+        FrontBack frontBack = new FrontBack();
+        return "Front Back Array list:" +frontBack.isSymmetric();
+    }
+
 
 }
