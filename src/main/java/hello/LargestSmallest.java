@@ -22,7 +22,7 @@ public class LargestSmallest {
         }
         return smallest;
     }
-    /*Only for testing*/
+    /*only for testing*/
     public static void main(String args[]){
         LargestSmallest obj=new LargestSmallest();
         System.out.println("the bigest value is :"+obj.getBiggest());

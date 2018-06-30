@@ -12,7 +12,8 @@ public class HelloController {
                 "1. /arraydemo<br/>"+
                 "2. /BiggestSmallest<br/>"+
                 "3./FrontBack<br/>"+
-                "4./SeperatingArray<br/>";
+                "4./SeperatingArray<br/>"+
+                "5./IntegerInputs<br/>";
 
     }
     @RequestMapping("/arraydemo")
@@ -35,7 +36,13 @@ public class HelloController {
         SeperatingArray seperatingArray = new SeperatingArray();
         return "Output Array1=" + seperatingArray.seperate1() + "Output Array2=" + seperatingArray.seperate2();
     }
+    @RequestMapping("/IntegerInputs")
+    public String  IntegerInputs() {
+        IntegerInputs integerInputs = new IntegerInputs();
+        return "maximum value =" + integerInputs.getMaximum() + "minimum value =" + integerInputs.getMinimum();
+    }
 
 
 
-}
+
+    }
